@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
+	"root/examples"
 )
 
 func MyFunc() {
 	fmt.Println("ovaj kod je super")
 }
-
 func Branko() {
 	fmt.Println("Branko")
 }
@@ -32,6 +32,8 @@ func PrintAll(name string, fn Reader) {
 	fn()
 }
 
+// 🐰😎//🌞
 func main() {
 	PrintAll("Janko", Setting(MyFunc, Branko, MyFunc))
+	fmt.Println(examples.Returner("Janko the KING")())
 }
