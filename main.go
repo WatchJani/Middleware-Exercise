@@ -8,6 +8,7 @@ import (
 func MyFunc() {
 	fmt.Println("ovaj kod je super")
 }
+
 func Branko() {
 	fmt.Println("Branko")
 }
@@ -36,4 +37,12 @@ func PrintAll(name string, fn Reader) {
 func main() {
 	PrintAll("Janko", Setting(MyFunc, Branko, MyFunc))
 	fmt.Println(examples.Returner("Janko the KING")())
+
+	// http.HandleFunc("/user", func(w http.ResponseWriter, r *http.Request) {
+	// 	w.Header().Add("fap", "asd")
+	// })
+
+	// http.ListenAndServe(":5000", nil)
+
+	examples.Execute(examples.Maker())
 }
