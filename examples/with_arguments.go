@@ -23,3 +23,19 @@ func Execute(functions ...Text) {
 		fn()
 	}
 }
+
+type Handler func(string, string)
+
+func Janko(name, suerName string) {
+	fmt.Println(name, suerName)
+
+	return
+}
+
+func HandlerMaker(handler Handler) Handler {
+	return func(s1, s2 string) {
+		fmt.Println("Import another code")
+
+		handler(s1, s2)
+	}
+}
